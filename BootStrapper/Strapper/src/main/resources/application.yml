@@ -1,0 +1,42 @@
+server:
+  port: 9527
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://172.81.246.234:13306/sxdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+    username: sx
+    password: abc123456
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+      location: E:/sxlog/data/upload_tmp
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:
+
+logging:
+  config: classpath:logback.xml
+
+ser:
+  fileSystem:
+    patternUrl: /fs/gl/**
+    path: D:/lichenw/sxatt/
+  wx:
+    appid: wx805c1ef8c48c5c29
+    secret: 77e84d97baea491343ed7d7649929199
+    payNotifyUrl: https://api.puletter.com/po/wxpay/notify
+    payKey: puxinerkejipuxinerkeji1234567890
+    paymchId: 1538274821
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

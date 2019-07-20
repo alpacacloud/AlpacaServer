@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alpaca.components.authmgr.mapper.UserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.alpaca.components.authmgr.entity.User">
+        <id column="Id" property="Id" />
+        <result column="PersonName" property="PersonName" />
+        <result column="LoginName" property="LoginName" />
+        <result column="LoginPwd" property="LoginPwd" />
+        <result column="LoginCount" property="LoginCount" />
+        <result column="LastLoginTime" property="LastLoginTime" />
+        <result column="LogicStatus" property="Status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Id, PersonName, LoginName, LoginPwd, LoginCount, LastLoginTime, LogicStatus
+    </sql>
+
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alpaca.components.filemgr.mapper.AttachmentDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.alpaca.components.filemgr.entity.Attachment">
+        <id column="fid" property="fid" />
+        <result column="bizID" property="bizID" />
+        <result column="ActulName" property="ActulName" />
+        <result column="ActulPath" property="ActulPath" />
+        <result column="Exten" property="Exten" />
+        <result column="LogicStatus" property="Status" />
+        <result column="fileState" property="fileState" />
+        <result column="Module" property="Module" />
+        <result column="CreateTime" property="CreateTime" />
+        <result column="IsPic" property="IsPic" />
+        <result column="ThumbPath" property="ThumbPath" />
+        <result column="FileSize" property="FileSize" />
+        <result column="FileName" property="FileName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        fid, bizID, ActulName, ActulPath, Exten, LogicStatus, fileState, Module, CreateTime, IsPic, ThumbPath, FileSize, FileName
+    </sql>
+
+</mapper>
